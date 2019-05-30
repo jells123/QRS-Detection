@@ -3,11 +3,11 @@ from bs4 import BeautifulSoup
 import os
 import time
 
-if not os.path.exists('data'):
-	os.mkdir('data')
-dest_folder = os.getcwd() + "/data/"
+if not os.path.exists('test'):
+	os.mkdir('test')
+dest_folder = os.getcwd() + "/test/"
 
-url = 'https://physionet.org/pn3/incartdb/'
+url = 'https://physionet.org/physiobank/database/mitdb/'
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'html5lib')
 
